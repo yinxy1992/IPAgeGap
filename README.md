@@ -1,7 +1,7 @@
 # IPAgeGap----Taisheng Model
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![R](https://img.shields.io/badge/R-4.0%2B-276DC3.svg?logo=r&logoColor=white)](https://www.r-project.org/)
+[![R](https://img.shields.io/badge/R-4.0%2B-276DC3.svg)](https://www.r-project.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Basic code and data processing for the Taisheng model to quantify immune-physiological status.**
@@ -33,15 +33,18 @@ Related web tool: **[IPAge — Immune Age Assessment Platform](https://imuage.na
 
 ```mermaid
 flowchart TD
-    A["1 · Check-up data preprocessing — feature cleaning and train/test split"] --> B["2 · Multi-model benchmark — GB / Lasso / MLP / RF / Ridge / SVR / XGB"]
-    B --> C["3-1 · XGBoost ensemble-size test — top-feature overlap / stability"]
-    C --> D["3-2 · Final XGBoost ensemble — 20 models + SHAP interpretation"]
-    D --> E["3-3 · Model results — metrics, residuals, learning curves, SHAP plots"]
-    E --> F["4 · HIV validation cohort processing"]
-    F --> G["5 · SLE validation cohort processing"]
-    G --> H["6 · Healthy-set calibration screening — M1–M4 comparison and residual checks"]
-    H --> I["7 · Applying the selected M3 calibration"]
-    I --> J["8 · Calibration diagnostics"]
+    A["1 · Data preprocessing"] --> B["2 · Model benchmark"]
+    B --> C["3-1 · Ensemble test"]
+    C --> D["3-2 · Ensemble + SHAP"]
+    D --> E["3-3 · Model results"]
+    E --> F["4 · HIV cohort"]
+    F --> G["5 · SLE cohort"]
+    G --> H["6 · Calibration screen"]
+    H --> I["7 · M3 calibration"]
+    I --> J["8 · Diagnostics"]
+
+    classDef step fill:#eef3fb,stroke:#4a72b0,stroke-width:1px,color:#1f2937;
+    class A,B,C,D,E,F,G,H,I,J step;
 ```
 
 Run the scripts in filename order: `1 → 2 → 3-1 → 3-2 → 3-3 → 4 → 5 → 6 → 7 → 8`.
