@@ -1,14 +1,14 @@
-# IPAgeGap
+# IPAgeGap----Taisheng Model
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
-[![R](https://img.shields.io/badge/R-%3E%3D4.0-brightgreen.svg)](https://www.r-project.org/)
+[![R](https://img.shields.io/badge/R-4.0%2B-276DC3.svg?logo=r&logoColor=white)](https://www.r-project.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 **Basic code and data processing for the Taisheng model to quantify immune-physiological status.**
 
 This repository contains the core code and data-processing pipeline of the **iAgeGap / IPAgeGap (immune age gap)** study. The workflow starts from raw clinical check-up data, systematically compares multiple regression models, builds an XGBoost ensemble model with feature-attribution analysis, processes two independent validation cohorts (HIV and SLE), and finally compares several residual-calibration strategies on a healthy test set, selecting **M3** as the final model and reporting diagnostic results.
 
-Related web tool: **[ImuAge — Immune Age Assessment Platform](https://imuage.nanhulab.ac.cn/)**
+Related web tool: **[IPAge — Immune Age Assessment Platform](https://imuage.nanhulab.ac.cn/)**
 
 > **Preprint (to be added):** The preprint URL for this study will be inserted here once available.  
 > _Placeholder — replace this line with the preprint link._
@@ -33,13 +33,13 @@ Related web tool: **[ImuAge — Immune Age Assessment Platform](https://imuage.n
 
 ```mermaid
 flowchart TD
-    A["1 · Check-up data preprocessing<br/>feature cleaning and train/test split"] --> B["2 · Multi-model benchmark<br/>GB / Lasso / MLP / RF / Ridge / SVR / XGB"]
-    B --> C["3-1 · XGBoost ensemble-size test<br/>top-feature overlap / stability"]
-    C --> D["3-2 · Final XGBoost ensemble<br/>20 models + SHAP interpretation"]
-    D --> E["3-3 · Model results<br/>metrics, residuals, learning curves, SHAP plots"]
+    A["1 · Check-up data preprocessing — feature cleaning and train/test split"] --> B["2 · Multi-model benchmark — GB / Lasso / MLP / RF / Ridge / SVR / XGB"]
+    B --> C["3-1 · XGBoost ensemble-size test — top-feature overlap / stability"]
+    C --> D["3-2 · Final XGBoost ensemble — 20 models + SHAP interpretation"]
+    D --> E["3-3 · Model results — metrics, residuals, learning curves, SHAP plots"]
     E --> F["4 · HIV validation cohort processing"]
     F --> G["5 · SLE validation cohort processing"]
-    G --> H["6 · Healthy-set calibration screening<br/>M1–M4 comparison and residual checks"]
+    G --> H["6 · Healthy-set calibration screening — M1–M4 comparison and residual checks"]
     H --> I["7 · Applying the selected M3 calibration"]
     I --> J["8 · Calibration diagnostics"]
 ```
@@ -168,7 +168,7 @@ A preprint will be announced; the URL placeholder is retained above and below.
 > **Preprint:** _to be added (URL to be inserted here)_
 
 When citing this code, please refer to the repository: <https://github.com/yinxy1992/IPAgeGap>  
-Related platform: [ImuAge](https://imuage.nanhulab.ac.cn/)
+Related platform: [IPAge](https://imuage.nanhulab.ac.cn/)
 
 ---
 
