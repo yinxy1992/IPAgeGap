@@ -8,7 +8,7 @@
 
 This repository contains the core code and data-processing pipeline of the **iAgeGap / IPAgeGap (immune age gap)** study. The workflow starts from raw clinical check-up data, systematically compares multiple regression models, builds an XGBoost ensemble model with feature-attribution analysis, processes two independent validation cohorts (HIV and SLE), and finally compares several residual-calibration strategies on a healthy test set, selecting **M3** as the final model and reporting diagnostic results.
 
-Related web tool: **[IPAge — Immune Age Assessment Platform](https://imuage.nanhulab.ac.cn/)**
+Related web tool: **[IPAge — Immune Physiological Status Assessment Platform](https://imuage.nanhulab.ac.cn/)**
 
 > **Preprint (to be added):** The preprint URL for this study will be inserted here once available.  
 > _Placeholder — replace this line with the preprint link._
