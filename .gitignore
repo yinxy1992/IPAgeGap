@@ -1,0 +1,48 @@
+# ===== Python 缓存 =====
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# ===== R 缓存 =====
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# ===== 原始数据与中间数据（含敏感信息，禁止上传）=====
+*.csv
+*.xlsx
+*.xls
+*.tsv
+*.txt.bak
+体检明细.csv
+体检首页+基本信息.csv
+
+# ===== 模型与结果文件（体积大、可重新生成）=====
+*.pkl
+*.npy
+*.npz
+*.rds
+*.RDS
+*.json
+ensemble_results/
+diag_*/
+raw_data_*.csv
+filtered_*.csv
+*_filtered_matr*.csv
+*_test_data*.csv
+*_valid_info*.csv
+id_mat*.csv
+new_result_mat*.csv
+
+# ===== 图像输出（由脚本重新生成）=====
+*.png
+*.pdf
+*.jpg
+*.svg
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+desktop.ini
